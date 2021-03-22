@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SimpbeApi.Core.Model
 {
-    public class StudenGrade
+    public class StudentGrade
     {
         public Student Student { get; set; }
 

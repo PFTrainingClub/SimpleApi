@@ -329,4 +329,3 @@ ASALocalRun/
 **/wwwroot/css/*.css
 
 # VisualStudio .NET Core
-appsettings.Development.json

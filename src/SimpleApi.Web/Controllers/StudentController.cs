@@ -85,10 +85,11 @@ namespace SimpbeApi.Web.Controllers
 
         //private StudentGrade GetGradeByStudentId(Guid studentId)
         //{
-        //    StudentGrade student = GetStudentById(studentId);
-            
-
-
+        //  var student = GetStudentById(studentId);
+        // var grade = GetGradeByStudentId(studentId);
+        // var rank = GetRankByGradeValue(grade);
+        // var result = new StudentGrade(){}
+        return 
         //}
     }
 }

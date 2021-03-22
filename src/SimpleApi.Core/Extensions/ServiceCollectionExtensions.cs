@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using SimpbeApi.Core.DbContexts;
 using SimpleApi.Core.AppSettings;
+using SimpleApi.Core.Services;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -23,6 +24,8 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddCoreAppSettings(this IServiceCollection services, IConfiguration configuration)
         {
             return services.Configure<DatabaseAppSettings>(configuration.GetSection("Databases"));
+
+            services.AddScoped<IStudentService, StudentService>();
         }
     }
 }

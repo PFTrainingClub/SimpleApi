@@ -9,7 +9,15 @@ namespace SimpbeApi.Core.Model
 
         public Grade Grade { get; set; }
 
-        public int Rank { get; set; }
+        public RankLevels Rank { get; set; }
 
+    }
+
+    public enum RankLevels
+    {
+        Excellent = 1,
+        Good = 2,
+        Fair = 3,
+        Weak = 4
     }
 }

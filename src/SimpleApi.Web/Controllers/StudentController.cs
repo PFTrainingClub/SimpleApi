@@ -11,6 +11,7 @@ namespace SimpbeApi.Web.Controllers
     [Route("api/students")]
     public class StudentController : Controller
     {
+        //test
         private CoreDbContext DbContext { get; }
 
         public StudentController(CoreDbContext dbContext)

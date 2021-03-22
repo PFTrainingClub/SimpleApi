@@ -13,6 +13,7 @@ namespace SimpbeApi.Web.Controllers
     [Route("api/students")]
     public class StudentController : Controller
     {
+        //test
         private CoreDbContext DbContext { get; }
 
         public StudentController(CoreDbContext dbContext)
@@ -24,6 +25,55 @@ namespace SimpbeApi.Web.Controllers
         public async Task<ActionResult<IEnumerable<Core.Entities.Student>>> GetStudentsAsync()
         {
             return await DbContext.Students.ToListAsync();
+        }
+
+    }
+
+    interface IRepositoryBase<T>
+    {
+        public ValueTask<T> GetById(int id);
+    }
+
+    class RepositoryBase<T> : IRepositoryBase<T>
+    {
+        private CoreDbContext DbContext { get; }
+
+        public RepositoryBase(CoreDbContext dbContext)
+        {
+            DbContext = dbContext;
+        }
+
+        //public async ValueTask<T> GetById(Guid id)
+        //{
+        //    var entity = await DbContext.Students.FirstOrDefaultAsync(s => s.Id == id);
+        //    //var model = Mapper
+        //    //return;
+        //}
+
+        public ValueTask<T> GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    class GradeRepository<Grade> : RepositoryBase<Grade>
+    {
+        public GradeRepository(CoreDbContext dbContext) : base(dbContext)
+        {
+        }
+    }
+
+    class StudentRepository<Student> : RepositoryBase<Student>
+    {
+        public StudentRepository(CoreDbContext dbContext) : base(dbContext)
+        {
+        }
+    }
+
+    class SubjectRepository<Grade> : RepositoryBase<Subject>
+    {
+        public SubjectRepository(CoreDbContext dbContext) : base(dbContext)
+        {
         }
 
 

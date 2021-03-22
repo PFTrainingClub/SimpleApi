@@ -89,7 +89,7 @@ namespace SimpbeApi.Web.Controllers
         // var grade = GetGradeByStudentId(studentId);
         // var rank = GetRankByGradeValue(grade);
         // var result = new StudentGrade(){}
-        return 
+       // return 
         //}
     }
 }

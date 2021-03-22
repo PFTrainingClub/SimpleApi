@@ -28,7 +28,7 @@ namespace SimpbeApi.Web.Controllers
 
 
         //[HttpGet, Route("{studentId}/grade")]
-        //public async Task<ActionResult<IEnumerable<Student>>> GetStudentByIdAsync(Guid studentId)
+        //public async Task<ActionResult<IEnumerable<Core.Model.Student>>> GetStudentByIdAsync(Guid studentId)
         //{
         //    return await DbContext.Students.ToListAsync();
         //}
@@ -36,7 +36,7 @@ namespace SimpbeApi.Web.Controllers
         //private StudentGrade GetGradeByStudentId(Guid studentId)
         //{
         //    StudentGrade student = GetStudentById(studentId);
-        //    var studentGrade = GetGrade
+            
 
 
         //}
